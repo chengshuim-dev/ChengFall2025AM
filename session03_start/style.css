@@ -1,0 +1,50 @@
+body {
+  background-color: #d3aa6c;
+  color: #b46906;
+  font-family: "Leckerli One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+
+ /* grouping selectors*/
+ h1,h2,h3,h4.h5.h6,p,ul,blockquote{
+    margin :2
+}
+
+header{ 
+     background-color: #d8b75e;
+    text-align: center;
+    padding: 30px;
+    font-size: 24px;
+}
+
+
+nav{background-color: #faef8d;
+text-align: center;
+padding: 10px;
+}
+
+
+/*pseudo class selector*/
+nav a:hover {
+  color: #66b90c;
+  text-decoration: underline;
+}
+nav a {
+  color: #1b7424;
+  text-decoration: none;
+  margin:0px 20px;
+  letter-spacing: 3px;
+}
+  main{background-color: #f7f478;
+padding: 50px 100px;}
+main h2{font-size: 54px;
+margin: 10px 8px;}
+main h3 {font-size: 30px}
+  footer{background-color: #fde88c ;}
+p{font-family: "Delius Unicase", cursive;
+  font-weight: 400;
+  font-style: normal;}  
