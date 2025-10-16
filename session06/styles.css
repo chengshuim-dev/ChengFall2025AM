@@ -1,0 +1,148 @@
+/* START border-box fix */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/* END border-box fix */
+body {
+    background-color: #43af28;
+        color: #FFF;
+        background-image: url("images/3.jpg");
+}
+div.container {
+    width: 90%;
+    background-color: #88cf46;
+    /* center the div container */
+    margin: 20px auto;
+
+}
+ /*GROUPING CSS SELECTOR*/
+header,
+nav,
+main,
+aside,
+footer {
+    padding: 10px;
+}
+header {
+    background-color: #93ec8b;
+     width:70%;
+     /*height:100%;*/
+    float: left;
+    height: 120px;
+ 
+}
+nav {
+   background-color: #93ec8b;
+        width: 30%;
+    float: left;
+        height: 120px;
+   
+    
+}
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    
+}
+nav li {
+    display: inline-block;
+    background-color:#72c76b;
+    width: 70px;
+    padding: 0px;
+    text-align: center;
+    margin: 0px 5x;
+    border-radius: 10px;
+     line-height: 100px;  
+
+}
+nav a {
+    text-decoration: none;
+    color: #FFF;
+}
+nav a:hover {
+    color: #33E89A;
+}
+main {
+    background-color:#5dc953;
+    width:100%;
+     /*height:100%;*/
+    float: left;
+}
+section {
+    background-color: #21a759;
+}
+aside {
+    background-color:  #88cf46;
+        width: 30%;
+    float: left;
+}
+footer {
+    background-color: #93ec8b;
+    float: none;
+    clear: both;
+}
+.row {
+  display: flex;
+  gap: 20px;            
+ 
+  margin-bottom: 20px;  
+}
+
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.img1, .img2 {
+  flex:150px;
+    border: 2px solid #9de242;  /* 2px 宽度，虚线，color */
+  padding: 10px;            
+  box-sizing: border-box;    
+  border-radius: 0px; 
+}
+
+.img1 img, .img2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+/* 内容占剩余空间 */
+.row .img1, .row .img2,
+.row .A, .row .B {
+  flex: 1;             
+}
+.A, .B {
+  padding: 10px;
+  background-color: #0f8f35; 
+  color: #FFF;
+}
+ img:hover {
+  transform: scale(1.1);}
+  header h1 {
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; 
+    /* 100-900 */
+    font-style: normal;
+    font-variant: small-caps;
+    font-size: 66px;
+    color: #0e9245;
+}
+.A, .B {
+  border: 2px dashed #9de242;  /* 2px 宽度，虚线，color */
+  padding: 10px;            
+  box-sizing: border-box;    
+  border-radius: 10px;     
+}
+
