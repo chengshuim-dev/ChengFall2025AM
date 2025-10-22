@@ -1,0 +1,185 @@
+/* START border-box fix */
+html {
+  box-sizing: border-box;
+}
+/* asterisk (*) symbol represents the universal selector. Its primary function is to select all elements of any type within the document. */
+/* :before is a pseudo-element used to insert content before the actual content of a selected element. It creates a "virtual" first child within the element, allowing you to style and add content that isn't directly present in your HTML markup. */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* END border-box fix */
+body {
+    /*background-color: rgb(202, 128, 236);*/
+    background-image: url(images/2.jpg);
+     background-size: cover; /* 铺满 */
+  background-position: center; 
+
+  background-attachment: fixed;
+}
+#wrapper {
+    margin: 0px auto;
+    /* centers the wrapper */
+    background-color: rgb(255, 255, 255);
+    max-width: 1000px;
+    border: solid 5px rgb(177, 115, 185);
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Add padding to all of the #wrapper child elements */
+#wrapper>* {
+  padding: 20px;/*内间距*/
+
+}
+header {
+   background-image: url(images/1.jpg);
+   
+   background-size: cover;
+   background-position: center 480px;
+    height: 150px;
+    /*background: skyblue;
+    */
+    order: 1;
+    flex: 1 0 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+   border: 5px solid rgb(177, 115, 185);
+ 
+}
+
+main {
+  background: rgb(218, 235, 145);
+   order: 3;
+    flex: 1 1 500px;
+}
+
+nav {
+    background: rgb(204, 152, 219);
+    order: 2;
+    flex: 1 0 200px;
+
+
+ 
+}
+aside {
+  background: rgb(84, 153, 82);
+   order: 4;
+    flex: 1 0 200px;
+}
+footer {
+  background: darkslateblue;
+   order: 5;
+    flex: 1 0 100%;
+}
+/* SUBSCRIBE BUTTON */
+div.buttonAbsolute {
+
+    background-color: rgb(240, 214, 248);
+    opacity: 1.0;
+    text-align: center;
+    color: rgb(66, 4, 117);
+    width: 150px;
+    border-radius: 125px;
+    padding: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+ opacity: 0.8;
+}
+/* view gallery button */
+
+header {
+  color: #f7edfc;
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+   font-size: 16px;
+}
+h2,h3,nav{
+  font-family: "DM Serif Text", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p,footer{
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #000000;
+   font-size: 20px;
+}
+#highlight {
+  font-weight: 700; /* 加粗 */
+ 
+}
+.photo {
+  width: 200px; 
+  height: 150px;
+  object-fit: cover;/* 不变形 */
+  border: 3px solid #e7eb26; 
+  border-radius: 10px; 
+  margin: 3px;        
+}
+.photo1 {
+  width: 200px; 
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #ea54f8; 
+  border-radius: 10px; 
+  margin: 3px;        
+}
+.photo2 {
+  width: 200px; 
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #67fc49; 
+  border-radius: 10px; 
+  margin: 3px;        
+}
+nav ul {
+  text-decoration: none; 
+   list-style: none;
+    padding: 0;  
+   justify-content: center;
+    
+       padding-top: 80px;
+}
+nav ul li a .B {
+  padding: 10px 20px;                
+  background-color: rgb(218, 235, 145);
+  color: #cf60e6;                       
+  border-radius: 8px;                
+  text-align: center;                
+  display: inline-block;             
+                    
+margin: 25px; 
+}
+
+nav ul li a .B:hover {
+  background-color: rgb(200, 220, 120); }
+.photo:hover, .photo1:hover, .photo2:hover {
+  transform: scale(1.2);
+ 
+}
+div.buttonAbsolute:hover { transform: scale(1.1);
+  background-color: rgb(219, 231, 168);
+
+
+}
+footer a {
+    color: #000;          
+    text-decoration: none; 
+}
+
+footer a:hover {
+    color: #d19de0;}
+ #highlight1 {
+  color: rgb(243, 107, 248);       
+ 
+}
+p {
+  text-indent: 30px; 
+}
