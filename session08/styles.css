@@ -1,0 +1,81 @@
+/* border-box fix */
+html {
+  box-sizing: border-box;
+}/*把整个页面的盒子模型计算方式设为 border-box*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}/*所有元素生成内容都遵守盒模型规则。*/
+
+body {
+  /* remove margin and padding on body */
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Grouping example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}/*首字母大写*/
+
+.wrapper {
+  background: rgb(180, 180, 180);
+  width: 90%;
+  margin: 0 auto;
+
+  display: grid;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>* {
+  padding: 20px;
+}
+
+header {
+  background: rgb(255, 141, 126);
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+
+}
+
+main {
+  background: rgb(255, 206, 116);
+  /* span 6 cols */
+  grid-column: 1 / 10;
+  
+}
+
+nav {
+  height: 80px; 
+  background: rgb(238, 163, 93);
+  /* span 3 cols */
+ grid-column: 1 / 13;
+  
+}
+aside {
+  background: rgb(255, 238, 144);
+  /* span 3 cols */
+    grid-column: 10 / 13;
+  
+}
+/* span 2 rows*/
+main,
+
+aside {
+  grid-row: 3 / 4;
+} 
+
+footer {
+  background: rgb(85, 152, 240);
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+}
