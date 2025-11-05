@@ -1,0 +1,295 @@
+html {
+  box-sizing: border-box;
+}/*把整个页面的盒子模型计算方式设为 border-box*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}/*所有元素生成内容都遵守盒模型规则。*/
+
+body {
+  /* remove margin and padding on body */
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  background-image: url("images/background.png");
+  background-repeat: no-repeat;           
+  background-position: center;           
+  background-size: cover;                 
+ 
+}
+.wrapper {
+  background: rgb(180, 180, 180);
+  width: 70%;
+  margin: 0 auto;
+
+  display: grid;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>* {
+  padding: 20px;
+}
+header {
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color:#FF6B6B;
+
+   animation: textColorChange 5s infinite alternate;
+}
+@keyframes textColorChange {
+  0% { color: #ff9500; }  
+  25% { color: #ff1664; } 
+  50% { color: #7fe74f; } 
+  75% { color: #39e6dd; } 
+  100% {color: #cf7835; } 
+}
+
+header {
+  background-color: #ffe799;  
+  text-align: center;         
+  padding: 20px;
+  border-bottom: 5px solid #FF9F1C; 
+  
+}
+.navbar {
+  display: flex;                 /* Use flexbox layout */
+  justify-content: center;     
+  align-items: center;
+  gap: 60px;                    
+  background-color: #FFE9A0;    
+  padding: 10px;
+}
+.bubble {
+  font-size: 15px;
+  color: #fff;
+  background-color: #FF9F1C;    
+  padding:8px;
+  border-radius: 10px;         
+  text-decoration: none;
+}
+.bubble:hover {
+    background-color: #fcb654; 
+      transform: translateY(-3px) scale(1);              
+}
+header {
+ 
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+
+}
+
+main {
+  background: rgb(255, 206, 116);
+  /* span 6 cols */
+  grid-column: 1 / 10;
+  
+}
+
+nav {
+  height: 80px; 
+ 
+  /* span 3 cols */
+ grid-column: 1 / 13;
+  
+}
+aside {
+  background: rgb(194, 224, 138);
+  /* span 3 cols */
+    grid-column: 10 / 13;
+  
+}
+/* span 2 rows*/
+main,
+aside {
+  grid-row: 3 / 4;
+} 
+
+footer {
+  background: rgb(85, 157, 240);
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+}
+.fruit-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  display: grid;
+  gap: 15px;
+}
+.fruit-list li {
+  border-width: 5px;
+  border-style: solid; 
+  border-radius: 12px;
+  padding: 12px;
+  
+}
+.mango {
+    
+  border-color: #d97a00;     
+  /*background-color: #fff4da;*/
+   background-image: url('images/mongo.png');
+  background-size: cover;
+  background-position: center;
+  color: #4b2e05;
+}
+
+.durian {
+  border-color: #a9a03f;     
+  /* background-color: #fbfbe3;*/
+    background-image:url('images/durian.png');
+  background-size: cover;
+  background-position: center;
+  color: #3a3a00;
+}
+
+.pineapple {
+  border-color: #bfa008;       
+   /*background-color: #fff9e0;*/
+   background-image:url('images/pineapple.png');
+  background-size: cover;
+  background-position: center;
+  color: #3d2e00;
+}
+
+.dragonfruit {
+  border-color: #cc2f65;      
+   /*background-color: #ffe6ee;*/
+
+  background-image:url('images/dragonfruit.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffe2ee;
+}
+
+.banana {
+  border-color: #ffe135;     
+  /* background-color: #fffde7;*/
+
+  background-image:url('images/banana.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #4a3c00;
+}
+
+.coconut {
+  border-color: #5b3a1d;       
+   /*background-color: #f7ede1;*/   
+   background-image:url('images/COCONUT.png');
+  background-size: cover;
+  background-position: center;
+  color: #6d502c;
+}
+
+.pomelo {
+  border-color: #b59700;       
+   /*background-color: #fff6e5;*/  
+    background-image:url('images/pomelo.png');
+  background-size: cover;
+  background-position: center;
+  color: #3c2a00;
+}
+.fruit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.fruit-card {
+  background-color: #fffaf7;
+  border: 3px solid #ffb347; 
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px;
+
+  animation: swing 3s infinite ease-in-out;
+}
+
+
+@keyframes swing {
+  0%   { transform: rotate(-3deg); }
+  25%  { transform: rotate(3deg); }
+  50%  { transform: rotate(-3deg); }
+  75%  { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+.fruit-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.fruit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  gap: 20px;
+  padding: 20px;
+
+  border: 5px solid #ffb347;   
+  border-radius: 12px;
+  
+  animation: borderColorChange 5s infinite alternate;
+}
+
+
+@keyframes borderColorChange {
+  0% { border-color: #ff9500; }  
+  25% { border-color: #ff1664; } 
+  50% { border-color: #ffc400; } 
+  75% { border-color: #ffee00; } 
+  100% { border-color: #cf7835; } 
+}
+
+.fruit-card img:hover {
+  transform: scale(1.1); 
+}
+.fruit-list li:hover {
+  transform: scale(1.1);
+}
+
+.fruit-table {
+  width: 100%;
+  margin-top: 20px;
+  border: 3px solid #FFB347;
+  border-radius: 12px;
+  animation: border1 2s infinite alternate;
+}
+@keyframes border1 {
+  0% { border-color: #FFB347; }
+  50% { border-color: #FF6B6B; }
+  100% { border-color: #FFB347; }
+}
+.fruit-table th, .fruit-table td {
+  border: 2px solid #FFB347;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.fruit-table th {
+  background-color: #FFE9A0;
+}
+
+.fruit-table tbody tr:hover {
+  background-color: #ffecd1;
+  transform: scale(1.02);
+  
+}
+h2,nav,footer {
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+p,table,ul {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; 
+  font-style: normal;
+}
